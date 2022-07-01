@@ -1,4 +1,4 @@
-package eblo.example.batch.configuration;
+package eblo.example.batch.config.datasource.property;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;

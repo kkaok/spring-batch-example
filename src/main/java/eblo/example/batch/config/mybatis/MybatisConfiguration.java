@@ -1,4 +1,4 @@
-package eblo.example.batch.configuration;
+package eblo.example.batch.config.mybatis;
 
 import javax.sql.DataSource;
 
@@ -9,6 +9,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+
+import eblo.example.batch.config.mybatis.property.MybatisProperties;
 
 @Configuration
 public class MybatisConfiguration {

@@ -1,4 +1,4 @@
-package eblo.example.batch.configuration;
+package eblo.example.batch.config.datasource;
 
 import java.util.Properties;
 
@@ -13,6 +13,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
+
+import eblo.example.batch.config.datasource.property.DataSourceProperties;
 
 @Configuration
 @EnableTransactionManagement()

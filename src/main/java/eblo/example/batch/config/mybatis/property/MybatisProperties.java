@@ -1,4 +1,4 @@
-package eblo.example.batch.configuration;
+package eblo.example.batch.config.mybatis.property;
 
 import org.apache.ibatis.session.ExecutorType;
 import org.apache.ibatis.type.JdbcType;

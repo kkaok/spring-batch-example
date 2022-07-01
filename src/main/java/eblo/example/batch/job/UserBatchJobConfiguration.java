@@ -23,10 +23,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.core.io.FileSystemResource;
 
-import eblo.example.batch.configuration.DataSourceConfiguration;
-import eblo.example.batch.configuration.DataSourceProperties;
-import eblo.example.batch.configuration.MybatisConfiguration;
-import eblo.example.batch.configuration.MybatisProperties;
+import eblo.example.batch.config.datasource.DataSourceConfiguration;
+import eblo.example.batch.config.datasource.property.DataSourceProperties;
+import eblo.example.batch.config.mybatis.MybatisConfiguration;
+import eblo.example.batch.config.mybatis.property.MybatisProperties;
 import eblo.example.batch.model.User;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
