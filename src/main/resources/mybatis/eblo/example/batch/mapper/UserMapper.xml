@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="eblo.example.batch.mapper.UserMapper">
+    <select id="findAll" resultType="User" parameterType="Map">
+        SELECT * 
+        FROM test_user 
+        <if test='age != null'>
+        where age >=#{age}
+        </if>
+        order by user_id asc 
+        LIMIT #{_skiprows}, #{_pagesize}
+    </select>
+</mapper>
