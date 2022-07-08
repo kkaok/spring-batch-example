@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="eblo.example.batch.mapper.UserMapper">
+<mapper namespace="eblo.example.batch.user.mapper.UserMapper">
     <select id="findAll" resultType="User" parameterType="Map">
         SELECT * 
         FROM test_user 

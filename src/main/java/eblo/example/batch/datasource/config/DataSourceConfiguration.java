@@ -1,9 +1,10 @@
-package eblo.example.batch.config.datasource;
+package eblo.example.batch.datasource.config;
 
 import java.util.Properties;
 
 import javax.sql.DataSource;
 
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -14,13 +15,14 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
-import eblo.example.batch.config.datasource.property.DataSourceProperties;
+import eblo.example.batch.datasource.property.DataSourceProperties;
 
 @Configuration
 @EnableTransactionManagement()
+@EnableConfigurationProperties({DataSourceProperties.class})
 public class DataSourceConfiguration {
 
-    @Bean
+    @Bean(destroyMethod = "close")
     @Primary
     public DataSource dataSource(DataSourceProperties dataSourceProperties) {
         HikariConfig config = new HikariConfig();
